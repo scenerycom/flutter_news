@@ -42,6 +42,10 @@ dependencies:
   # firebase_storage: ^11.1.2
   # firebase_analytics: ^10.3.0
   # cloud_firestore: ^4.6.0
+  # 登录组件
+  # 首页组件
+  # 我的组件
+  # 路由组件
 
 dev_dependencies:
   flutter_test:
