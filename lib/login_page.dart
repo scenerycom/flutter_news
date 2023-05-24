@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_news/translations_locale_Key.dart';
 import 'package:get/get.dart';
 
 import 'login_controller.dart';
@@ -20,21 +21,28 @@ class _LoginPageState extends State<LoginPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-
-    print(Get.parameters);
-
-    /// : {phone: 123456, pwd: aaa}
-    ///  Get.parameters['pwd'] aaa
-    ///
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
         child: Scaffold(
-      appBar: AppBar(
-        title: Text("登录页面"),
-      ),
+      appBar:
+          AppBar(title: Text(TranslationsLocaleKey.buttons_login.tr), actions: [
+        InkWell(
+            onTap: () {
+              loginGetController.handleExchangeLanguageLogic();
+            },
+            child: Center(child: Text("切换中文"))),
+        SizedBox(
+          width: 50,
+        ),
+        InkWell(
+            onTap: () {
+              loginGetController.handleExchangeLanguageLogic();
+            },
+            child: Center(child: Text("切换英文"))),
+      ]),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

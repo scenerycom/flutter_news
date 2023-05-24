@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_news/app_routes.dart';
+import 'package:flutter_news/messages_translations.dart';
 
 import 'package:get/get.dart';
 
@@ -8,6 +9,9 @@ class GetAppManager {
     return GetMaterialApp(
       initialRoute: AppRoutes.homePage,
       unknownRoute: AppPages.unknownPage,
+      translations: MessagesTranslations(),
+      locale: Locale('zh', 'CN'), // 将会按照此处指定的语言翻译
+      fallbackLocale: Locale('en', 'US'), // 添加一个回调语言选项，以备上面指定的语言翻译不存在
       getPages: AppPages.pages,
       routingCallback: (routing) {
         /*
