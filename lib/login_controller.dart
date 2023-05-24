@@ -14,6 +14,6 @@ class LoginGetController extends GetxController {
   }
 
   handleJumpRegisterPageLogic() {
-    Get.toNamed(AppRoutes.login);
+    Get.toNamed(AppRoutes.loginPage);
   }
 }

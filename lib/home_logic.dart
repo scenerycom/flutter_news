@@ -63,7 +63,7 @@ class HomeLogic extends GetxController {
 
   add() async {
     count++;
-    Get.toNamed(AppRoutes.login);
+    Get.toNamed(AppRoutes.productDetailPage, arguments: {"productId": "123"});
     // Get.config()
     // Get.until();
     // 转到下一个命名的路由，并删除所有之前的路由，直到表达式返回true。

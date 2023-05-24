@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 class GetAppManager {
   static Widget get rootApp {
     return GetMaterialApp(
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.homePage,
       unknownRoute: AppPages.unknownPage,
       getPages: AppPages.pages,
       routingCallback: (routing) {
@@ -25,7 +25,7 @@ class GetAppManager {
         print("GetAppManager---routingCallback:${routing?.current}");
 
         /// 是否需要打开广告页面
-        if (routing?.current == AppRoutes.home) {
+        if (routing?.current == AppRoutes.homePage) {
           print("打开广告页面");
         }
       },
