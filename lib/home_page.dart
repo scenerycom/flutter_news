@@ -37,11 +37,21 @@ class _HomePageState extends State<HomePage> {
                 appBar: AppBar(
                   title: Text("首页"),
                 ),
-                body: Center(
-                    child: Obx(
-                  () => ElevatedButton(
-                      child: Text("${homeLogic.count}"),
-                      onPressed: () => homeLogic.add()),
-                )))));
+                body: Column(
+                  children: [
+                    Center(
+                        child: Obx(
+                      () => ElevatedButton(
+                          child: Text("${homeLogic.count}"),
+                          onPressed: () => homeLogic.add()),
+                    )),
+                    Center(
+                        child: Obx(
+                      () => ElevatedButton(
+                          child: Text("${homeLogic.count}"),
+                          onPressed: () => homeLogic.handleLivePageLogic()),
+                    ))
+                  ],
+                ))));
   }
 }

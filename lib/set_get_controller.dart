@@ -51,5 +51,15 @@ class SetGetController extends GetxController {
   }
 
   /// 服务器数据
-  void initServerData() {}
+  void initServerData() {
+
+
+
+
+
+
+
+
+
+  }
 }

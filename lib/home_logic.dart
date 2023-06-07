@@ -14,8 +14,6 @@ class HomeLogic extends GetxController {
   void onClose() {
     // TODO: implement onClose
     super.onClose();
-
-    /// dispose worker
   }
 
   @override
@@ -61,9 +59,37 @@ class HomeLogic extends GetxController {
     }, time: const Duration(seconds: 1));
   }
 
+  handleAA() async {
+    print("AAA执行");
+    await handleBB();
+    print("2222执行");
+    handleCC();
+  }
+
+  handleBB() async {
+    print("BBB2333---------------执行");
+    await Future.delayed(Duration(seconds: 20), () {
+      print("666666-----");
+      return "123344";
+    });
+
+    print("BBB执行");
+    // await handleCC();
+  }
+
+  handleCC() {
+    print("handleCC执行");
+  }
+
+  handleLivePageLogic() {
+    Get.toNamed(AppRoutes.livePage, arguments: {"productId": "123"});
+  }
+
   add() async {
     count++;
-    Get.toNamed(AppRoutes.productDetailPage, arguments: {"productId": "123"});
+    // Get.toNamed(AppRoutes.productDetailPage, arguments: {"productId": "123"});
+    Get.toNamed(AppRoutes.liveListPage, arguments: {"productId": "123"});
+    // handleAA();
     // Get.config()
     // Get.until();
     // 转到下一个命名的路由，并删除所有之前的路由，直到表达式返回true。

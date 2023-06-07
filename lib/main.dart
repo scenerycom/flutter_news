@@ -6,5 +6,7 @@ void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
   RunAppManager.handleRunAppLogic();
+  FlutterNativeSplash.remove();
 }

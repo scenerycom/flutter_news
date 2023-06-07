@@ -37,10 +37,17 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   flutter_native_splash: ^2.3.0
+  video_player: ^2.6.1
+  shared_preferences: ^2.1.1
+  flutter_spinkit: ^5.2.0
+  cached_network_image: ^3.2.3
+  youtube_player_iframe: ^4.0.4
+  image_picker: ^0.8.7+5
   
 flutter_native_splash:
    color: "#42a5f5"
    background_image: "lib/images/app_splash.png"
+   android: true
  
   # firebase_auth: ^4.5.0
   # firebase_core: ^2.11.0
