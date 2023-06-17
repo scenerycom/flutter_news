@@ -2,8 +2,6 @@
 abstract class TranslationsLocaleKey {
   /// 登录按钮
   static const buttons_login = 'buttons_login';
-
-  /// 注册按钮
   static const buttons_register = 'buttons_register';
   static const buttons_logout = 'buttons_logout';
   static const buttons_sign_in_fb = 'buttons_sign_in_fb';

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 import 'live_child_player_page.dart';
 
 /// 仿照抖音
